@@ -1,0 +1,140 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    width: 100%;
+}
+.navbar {
+    width: 100%;
+    height: 60px;
+    padding: 5px;
+    float: right;
+    position: relative;
+}
+.navbar ul {
+    display: flex;
+    position: absolute;
+    right: 100px; /* afastado 100px do canto direito da tela com a propriedade maior*/
+    line-height: 30px;
+}
+.navbar ul li {
+    list-style: none;
+    margin: auto 0;
+    margin-right: 12px;
+}
+.navbar ul li a {
+    color: black;
+    font-size: 12px;
+    text-decoration: none;
+}
+.navbar ul li a:hover {
+    text-decoration: underline; /*efeito sublinhado nos 2 links*/
+}
+.navbar .images {
+    display: flex;
+    height: 30px;
+    float: right;
+    position: absolute;
+    right: 10px; /* afastado 100px do canto direito da tela com a propriedade maior*/  
+}
+.navbar .images a {
+    margin-right: 15px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.navbar .images a img {
+    display: block;
+    height: 30px;
+    margin: auto 0;
+    line-height: 60px;
+}
+.navbar .images a:nth-child(1) img { /*Configurando somente a imagem menu pra ajustar o em relação ao seu irmão*/
+    height: 15px;
+    opacity: 0.6;
+}
+.google {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-top: 180px;
+}
+.google img {
+    width: 325px;
+}
+.search {
+    width: 550px;
+    height: 45px;
+    display: block; margin: 0 auto;
+    margin-top: 10px;   
+}
+.search .input {
+    height: 45px;
+    position: relative;
+}
+.search .input input {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    height: 45px;
+    border-radius: 24px;
+    outline: none;
+    border: solid 1px #cecece;
+    padding: 0 45px;
+    font-size: 15px;
+}
+.search .input input:hover {
+    transition: 0.3s;
+    box-shadow: 2px 1px 2px rgb(85, 85, 85);
+}
+.search .input .fa-microphone {
+    font-size: 15px;
+    position: absolute;
+    right: 16px;
+    top: 15px;
+    cursor: pointer;
+    color: rgba(0, 0, 0,0.5 );
+}
+.search .input .fa-search{
+    font-size: 15px;
+    position: absolute;
+    left: 16px;
+    top: 15px;
+    cursor: pointer;
+    color: rgba(0, 0, 0,0.5 );
+}
+.buttons {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+.buttons button {
+    width: 150px;
+    height: 30px;
+    margin-right: 10px;
+    border: none;
+    padding: 0 16px;
+    background-color: rgb(221, 221, 221);
+    
+}
+.buttons button:hover {
+    border: 1px solid black;
+    border-radius: 8px;
+    box-shadow: 0, 1px, 1px rgba(0, 0, 0, 10%);
+}
+.buttons button a {
+    text-decoration: none;
+    color: black;
+    
+}
+
+
+
+
+
+/*body {
+    background-color: #202124;
+} */

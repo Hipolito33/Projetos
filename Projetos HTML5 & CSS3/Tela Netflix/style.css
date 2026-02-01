@@ -1,0 +1,144 @@
+/* Todo o conteúdo recebe padding e margin 0*/ 
+/* Padding = distância do conteúdo as bordas da div */ 
+/* Margin = distância das bordas até o canto da tela */ 
+/* box sizing fixa o tamanho da caixa tem considerar o padding */ 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* Configuração do conteúdo em tela na tag <body> */ 
+body{
+    width: 100%; /* ocopando todo o espaço da janela do navegador com width e heigth*/
+    height: 100%;
+    color: white;   /*todas as fontes de cor branca */
+    background: black; /*Background preto*/
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+/* Cria um "filho" da classe para estilização */ 
+.container::before{
+    content: "";
+    background: url(imagens/netflix-bg.jpg) no-repeat center center/cover;
+    position: absolute;
+    height: 100%;  /* background ocopando todo o espaço da janela do navegador com width e heigth*/
+    width: 100%;   /* da janela do navegador com width e heigth*/
+    opacity: 0.3;  /*pácidade em 30%*/
+    z-index: -1; /*Fica atrás de qualquer elemento que tiver na tela*/
+}
+/* Display: flex, transforma filhos de nav em flex itens*/
+/* Adiciona esses filhos a direita */
+.container .navbar{
+    height: 100px;   /* deixa a navbar com um tamanho de 100px*/
+    display: flex;   /* Adiciona esses filhos a direita  Display: flex, transforma filhos de nav em flex itens*/
+}
+/* Imagem ocupando 100% da altura e flutuando a esquerda do bloco como flex item*/
+.container .navbar .left{
+    height: 100%;   /*vai ocupar 100% da altura da navbar (100px)*/
+    display: flex;  /*vai ser flexivel*/
+    float: left;    /*vai ter um deslocamento pra esquerda*/
+}
+.container .navbar .left img {
+    height: 100px; /*altura da imagem 100px*/
+    position: absolute; /*posição absoluta*/
+    left: 35px; /*35px a esquerda*/
+}
+.container .navbar .right{
+    display: flex;
+    height: 100px; /*vai ocupar 100% a altura da navbar (100px)*/
+    float: right; /*Totalmente a direita*/
+    position: absolute; /*posição absoluta*/
+    right: 50px; /*desolcamento pra direita de 50px*/
+}
+.container .navbar .right .language {
+    margin: auto; /* margem ocupando so o tamanho do select e centralizando*/
+    align-items: center; /*alinhando os items*/
+    justify-content: center; /*justificando conteudo ao centro*/
+    font-size: 18px;
+    padding: 7px 10px;
+    color: white; /* Cor da fonte branca pra aparecer no background transparente*/
+    background: none;
+    cursor: pointer;
+    margin-right: 15px; /*Espaçando 15px a direita do (button entrar)*/
+}
+.container .navbar .right .language option {
+    background-color: grey;
+}
+.container .navbar .right button {
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 4px;
+    background-color: #e50914;
+    outline: none; /*contorno*/
+    padding: 7px 17px;
+    border: none; /*sem borda*/  
+    cursor: pointer; 
+}
+.container .navbar .right button a {
+    text-decoration: none;
+    color: white;
+} 
+.container .title{
+    padding: 70px 45px;
+}
+ .container .title .content{
+    width: 950px; /*largura do conteudo title em 950px*/
+    margin: auto; /* margin auto pra centralizar da esq pra dir*/
+    padding: 75px 0; /* espaçamento do container title encima e embaixo de 75px*/
+    text-align: center; /* alinhando o texto no centro*/
+}
+.container .title .content h1{
+    width: 650px; /*diminuindo largura do h1 pra ficar mais compacto e quebrar uma linha automatica*/
+    margin: auto; /* margem em auto pra centralizar da esq pra dir*/
+    font-size: 3.1rem; /*tamanho da fonte relativa em 49.6px*/
+    text-align: center; /*alinhando texto no centro*/
+}
+.container .title .content h2{
+    width: 650px; /*diminuindo largura do h1 pra ficar mais compacto*/
+    margin: auto; /* margem em auto pra centralizar da esq pra dir*/
+    font-size: 1.6rem; /*tamanho da fonte relativa em 25.6px*/
+    text-align: center; /*alinhando texto no centro*/
+}
+.container .title .content form h3{
+    font-size: 1rem;
+    margin: 18px 0; /*margem encima e embaixo de 18px*/
+    text-align: center;
+}.container .title .content form .email{
+    width: 1000px;
+    margin: auto;
+}
+.container .title .content form .email input{
+    height: 60px; /*altura de 60px*/
+    width: 450px; /*largura de 450px*/
+    margin: auto; /*margin automatica*/
+    padding: 20px; /*distancia da div pro conteudo*/
+    font-size: 20px;
+    outline: none;
+}
+.container .title .content form .email button {
+    height: 60px;
+    margin: auto;
+    padding: 20px;
+    font-size: 20px;
+    outline: none;
+    width: 180px;
+    margin-left: -5px;/*grudar no input email*/
+    border: none;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 17px;
+    background: #e50914;
+    cursor: pointer;
+    outline: none;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+.container .title .content form .email button a {
+    text-decoration: none;
+    color: white;
+}
+.container .title .content form .email button:hover {
+    background-color: #ce000a;
+}

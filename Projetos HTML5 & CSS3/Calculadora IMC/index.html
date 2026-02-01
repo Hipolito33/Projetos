@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Capriola&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"rel="stylesheet">
+    <title>Calculadora IMC</title>
+
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="container_tittle">
+            <h1>Calculadora de IMC</h1>
+            <P>Descubra seu Índice de Massa Corporal</P>
+        </div>
+        <div id="container_form">
+            <form action="#">
+                <p>Peso(kg)</p>
+                <input type="number" name="peso" id="peso" placeholder="Ex: 70">
+                <p>Altura(cm)</p>
+                <input type="number" name="altura" id="altura" placeholder="Ex: 1,75">
+                <div id="form_buttons">
+                    <input type="button" value="Calcular" id="calcular" onclick = "calculate()">
+                    <input type="button" value="Limpar" id="limpar" onclick="clean()">
+                </div>
+            </form>
+        </div>
+        <div id="resultado">
+            <p style="color: #9ca3af;"></p>
+            <h1 id="resultado1"></h1>
+            <p id="resultado2"></p>
+        </div>
+        <div id="referencia">
+            <p>Tabela de Referência</p>
+            <div class="ref">
+                <p>Abaixo de 18,5 kg</p>
+                <p id="p_color_1">Abaixo do peso</p>
+            </div>
+            <div class="ref">
+                <p>18,5 - 24,9</p>
+                <p id="p_color_2">Peso normal</p>
+            </div>
+            <div class="ref">
+                <p>25,0 - 29,9 </p>
+                <p id="p_color_3">Sobrepeso</p>
+            </div>
+            <div class="ref">
+                <p>Acima de 30 </p>
+                <p id="p_color_4">Obesidade</p>
+            </div>
+        </div>
+    </div>
+
+<script defer>
+
+    function calculate() {
+        var tpeso = document.getElementById('peso')
+        var taltura = document.getElementById('altura')
+        var peso = Number.parseFloat(tpeso.value)
+        var altura = Number.parseFloat(taltura.value)
+        var imc = peso/(altura*altura)
+        
+        if (imc < 18.5) {
+            var resultado = document.getElementById('resultado1')
+            var resultado = document.getElementById('resultado2')   
+            resultado1.innerHTML = imc.toFixed(2)
+            resultado1.style.color = '#3498db'
+            resultado2.innerHTML = 'Abaixo do peso'
+            resultado2.style.color = '#3498db'
+        } else if (imc >= 18.5 && imc < 25) {
+            var resultado = document.getElementById('resultado1')
+            var resultado = document.getElementById('resultado2')
+            resultado1.innerHTML = imc.toFixed(2)
+            resultado1.style.color = '#2ecc71'
+            resultado2.innerHTML = 'Peso normal'
+            resultado2.style.color = '#2ecc71'
+        } else if (imc >= 25 && imc < 30) {
+            var resultado = document.getElementById('resultado1')
+            var resultado = document.getElementById('resultado2')
+            resultado1.innerHTML = imc.toFixed(2)
+            resultado1.style.color = '#f1c40f'
+            resultado2.innerHTML = 'Sobrepeso'
+            resultado2.style.color = '#f1c40f'
+        } else {
+            var resultado = document.getElementById('resultado1')
+            var resultado = document.getElementById('resultado2')
+            resultado1.innerHTML = imc.toFixed(2)
+            resultado1.style.color = '#e74c3c'
+            resultado2.innerHTML = 'Obesidade'
+            resultado2.style.color = '#e74c3c'
+        }
+    }
+
+    function clean () { // fuction pra limpar os dados da tela e zerar o programa
+
+        var tpeso = document.getElementById('peso').value = '' // zera o valor do input peso
+        var taltura = document.getElementById('altura').value = '' //zera o valor do input altura
+        var resultado1 = document.getElementById('resultado1') // cria variavel pra salvar contedo do id resultado1
+        var resultado2 = document.getElementById('resultado2')  // cria variavel pra salvar contedo do id resultado2
+        resultado1.innerHTML = '' // zera conteudo do resultado1
+        resultado2.innerHTML = ''// zera conteudo do resultado2
+    }
+    
+    
+</script>
+</body>
+</html>

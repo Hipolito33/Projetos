@@ -1,0 +1,150 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: black;
+    font-family: "Inter", "Roboto", "Open Sans", sans-serif;;
+}
+.container {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+.container .header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    background-color: #1E88E5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 30px;
+    color: #FFFFFF;
+}
+.container .header .logo {
+    padding-left: 12px;
+    font-size: 1.2rem;
+}
+.container .header .links ul {
+    display: flex;
+    padding-right: 12px;
+}
+.container .header .links ul li{
+    margin-right: 30px;
+    list-style: none;
+}
+.container .header .links ul li a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+.container .header .links ul li a:hover{
+    color: #BBDEFB;
+}
+.container .main {
+    margin-top: 60px; /*Tirando o conteudo da class main que estava escondido atrás do header por estar em posição fixa*/
+    background-color: #64B5F6;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    color: #FFFFFF;
+}
+.container .main h1 {
+    margin-bottom: 15px;
+    font-size: 2.6rem;
+}
+.container .main p {
+    margin-bottom: 35px;
+    font-weight: bold;
+}
+.container .main button {
+    background-color: #1976D2;
+    color: #FFFFFF;
+    border: none;
+    font-size: 15px;
+    padding: 15px 20px;
+    border-radius: 4px;
+}
+.container .main button:hover {
+    border: 1px solid #135597;
+    cursor: pointer;
+}
+.container .section {
+    height: 300px;
+    display: flex;
+    flex-flow: row, wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 80px;
+}
+.container .section .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #FFFFFF; 
+    height: 200px;
+    width: 200px;
+    padding: 20px 25px;
+    border-radius: 12px;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.185);
+}
+.container .section .card:hover{
+    cursor: pointer;
+    border: 1px solid black;
+    transition: 0.4s;
+}
+
+.container .section .card i{
+    margin-bottom: 10px;
+}
+.container .section .card h2{
+    margin-bottom: 10px;
+    color: #05295e;
+}
+.container .section .card p{
+    color: #424242;
+}
+.container .section .card i {
+    padding-bottom: 20px;
+    font-size: 25px;
+}
+.container .footer {
+    height: 120px;
+    background-color: #464646;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    top: 17%;
+    padding-bottom: 10px;
+}
+.container .footer h1{
+    color: #FFFFFF;
+}
+.container .footer ul{
+    display: flex;
+}
+.container .footer ul li {
+    list-style: none;
+    margin: 10px;
+    border-right: #FFFFFF;
+}
+
+.container .footer ul li a{
+    text-decoration: none;
+    font-size: 15px;
+    color: #FFFFFF;
+
+}

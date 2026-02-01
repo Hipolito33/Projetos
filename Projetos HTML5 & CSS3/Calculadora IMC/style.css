@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(180deg, #14B8A6 0%, #11a495 100%);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+#container {
+    width: 500px;
+    height: 750px;
+    background-color: #FFFF;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.425);
+}
+#container_tittle {
+    width: 100%;
+    height: 70px;
+    margin: 20px 5px;
+}
+#container_tittle h1 {
+    color: #14B8A6;
+}
+#container_tittle p {
+    color: #9ca3af;
+}
+#container_form {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#container_form form h1, #container_form form p {
+    display: flex;
+    font-size: 12px;
+    margin: 5px 0;
+    color: #2A333D;
+    font-weight: bold;
+}
+#container_form form input, #container_form form input {
+    width: 450px;
+    border-radius: 24px;
+    font-size: 20px;
+    border: none;
+    padding: 5px 10px;
+    transition: all 0.2s ease;
+}
+#peso:focus {
+    outline: none;
+    border: 4px solid #14B8A6;
+}
+#altura:focus {
+    outline: none;
+    border: 4px solid #14B8A6;
+}
+#form_buttons {
+    display: flex;
+    margin-top: 25px;
+    gap: 10px;
+}
+#form_buttons #calcular {
+    width: 70%;
+    background-color: #14B8A6;
+    color: #FFFF;
+    font-size: 12px;
+    padding: 12px 0;
+}
+#form_buttons #limpar {
+    width: 30%;
+    background-color: #14B8A6;
+    color: #FFFF;
+    font-size: 12px;
+}
+#form_buttons #calcular:hover,
+#form_buttons #limpar:hover {
+    background-color: #2cc9b6;
+    cursor: pointer;
+    transform: 1s;
+}
+#resultado {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 180px;
+    margin: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+}
+#resultado h1 {
+    color: #14B8A6;
+    font-size: 50px;
+}
+#referencia {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    font-size: 15px;
+}
+#pp {
+    margin: 0 0 10px 0;
+}
+.ref {
+    display: flex;
+    justify-content: space-between;
+}
+#p_color_1 {
+  color: #3498db !important; /* azul */
+}
+
+#p_color_2 {
+  color: #2ecc71 !important; /* verde */
+}
+
+#p_color_3 {
+  color: #f1c40f !important; /* amarelo */
+}
+
+#p_color_4 {
+  color: #e74c3c !important; /* vermelho */
+}

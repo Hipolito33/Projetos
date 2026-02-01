@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+.header {
+    width: 100%;
+    height: 3.75rem;
+    background-color: #FFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /*fixando header no topo*/
+    top:0;
+    left: 0;
+    z-index: 1000;
+}
+.header_logo {
+    font-size: .625rem;
+    padding: .625rem 1.5625rem;
+}
+.header_links ul {
+    display: flex;
+    gap: 30px;
+    padding: 0 2.5rem 0 0;
+    list-style: none;
+}
+.header_links ul li a {
+    text-decoration: none;
+    color: black;
+    transition: 0.2s;
+}
+.header_links ul li a:hover {
+    color: #C87941;
+}
+.main {
+    width: 100%;
+    height: 43.75rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.616), rgba(0, 0, 0, 0.438)), url(hero-coffe.jpg); /* camada escura */
+    background-position: center center; /* centralizando imagem de fundo*/
+    background-repeat: no-repeat;
+    position: relative; /*relative pra imagem nao fixar*/
+    top: 3.75rem; /*fazendo conteudo sair de baixo do header*/
+    left: 0;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+}
+.main_content h1 {
+    font-size: 60px;
+    color: #ffffff;
+}
+.main_content h2 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #ffffff;
+    margin: 30px 0;
+}
+.main_content button {
+    padding:  12px 26px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    color: #FFFF;
+    background-color: #C87941;
+    transition: 0.2s;
+}
+.main_content button:hover {
+    background-color: #ac6837;
+    cursor: pointer;
+}
+.section {
+    width: 100%;
+    height: 1200px;
+    background-color: #ffffff;
+    position: relative; /*relative pra imagem nao fixar*/
+    top: 3.75rem; /*fazendo conteudo sair de baixo do header*/
+    left: 0;
+    display: flex;
+    flex-direction: column;
+}
+.sobre {
+    height: 35%;
+    background-color: #e2d6ce;    
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.sobre h1 {
+    font-size: 40px
+}
+.sobre p {
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    color: #6e6660;
+}
+
+
+
+
+

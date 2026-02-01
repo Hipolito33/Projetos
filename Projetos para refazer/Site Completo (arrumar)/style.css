@@ -1,0 +1,40 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Arial', Helvetica, sans-serif;
+}
+body {
+    width: 80%; /*largura do site nao cobre todo so 80%*/
+    margin: 0 auto; /* margem pra cima e pra baixo zerada e pros lados automatica pra centralizar*/
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 150px;
+    padding: 25px 0px;
+}
+.navbar .logo {
+    width: 150px;
+}
+.navbar .logo img {
+    width: 100%;
+}
+.navbar .links ul {
+    list-style: none;
+    display: flex;
+}
+.navbar .links ul li {
+    margin-left: 35px;
+}
+.navbar .links ul li a {
+    text-decoration: none;
+    color: grey;
+    font-size: 21px;
+
+}
+.navbar .links ul li a:hover {
+    color: red;
+}

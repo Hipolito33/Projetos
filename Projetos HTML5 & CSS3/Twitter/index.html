@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twitter Clone</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="sidebar">
+        <i class="fab fa-twitter"></i>
+
+        <div class="sidebarOption active">
+            <span class="material-icons">home</span>
+            <h2>Home</h2>
+        </div>
+        <div class="sidebarOption">
+            <span class="material-icons">search</span>
+            <h2>Explorar</h2>
+        </div>
+        <div class="sidebarOption">
+            <span class="material-icons">notifications_none</span>
+            <h2>Notificações</h2>
+        </div>
+        <div class="sidebarOption">
+            <span class="material-icons">mail_outline</span>
+            <h2>Mensagens</h2>
+        </div>
+        <div class="sidebarOption">
+            <span class="material-icons">bookmark_border</span>
+            <h2>Bookmarks</h2>
+        </div>
+        <div class="sidebarOption">
+            <span class="material-icons">list_alt</span>
+            <h2>Listas</h2>
+        </div>
+        <div class="sidebarOption">
+            <span class="material-icons">perm_identity</span>
+            <h2>Perfil</h2>
+        </div>
+        <div class="sidebarOption">
+            <span class="material-icons">more_horiz</span>
+            <h2>Mais</h2>
+        </div>
+            
+    </div>
+    <div class="feed">
+        <div class="feed__header">
+            <h2>Home</h2>
+        </div>
+        <div class="tweetBox">
+            <form action="#">
+                <div class="tweetbox__input">
+                    <img src="imagens/profile.png" alt="">
+                    <input type="text" placeholder="O que está acontecendo">
+                </div>
+                <button class="tweetBox__tweetButton">Tweet</button>
+            </form>
+        </div>
+        <div class="post">
+            <div class="post__avatar">
+                <img src="imagens/profile.png" alt="">
+            </div>
+            <div class="post__body">
+                <div class="post__header">
+                    <div class="post__headerText">
+                        <h3><span class="underline">Codi Academy</span><span class="post__headerSpecial"><span class="material-icons post__badge">verified</span>@pópó</span></h3>
+                    </div>
+                    <div class="post__headerDescription">
+                        <p>Lorem, ipsum dolor sit amet consectetur adip.</p>
+                    </div>
+                </div>
+                <img src="https://pbs.twimg.com/media/G3uizWVWQAAMmWE?format=jpg&name=small" alt="">
+
+                <div class="post__footer">
+                    <span class="material-icons">comment</span>
+                    <span class="material-icons">repeat</span>
+                    <span class="material-icons">favorite_border</span>
+                    <span class="material-icons">publish</span>
+                </div>
+            </div>
+        </div>
+        <div class="post">
+            <div class="post__avatar">
+                <img src="imagens/profile.png" alt="">
+            </div>
+            <div class="post__body">
+                <div class="post__header">
+                    <div class="post__headerText">
+                        <h3><span class="underline">Codi Academy</span><span class="post__headerSpecial"><span class="material-icons post__badge">verified</span>@pópó</span></h3>
+                    </div>
+                    <div class="post__headerDescription">Lorem, ipsum dolor sit amet consectetur adip.</div>
+                </div>
+                <div class="post__footer">
+                    <span class="material-icons">comment</span>
+                    <span class="material-icons">repeat</span>
+                    <span class="material-icons">favorite_border</span>
+                    <span class="material-icons">publish</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="widgets">
+        <div class="widgets__input">
+            <span class="material-icons widgets__searchIcon">search</span>
+            <input type="text" placeholder="Buscar no Twitter">
+        </div>
+        <div class="widgets__widgetTrending">
+            <h2>Assuntos do Momento</h2>
+            <div class="trending">#Cruzeirão Cabuloso Maior de Minas</div>
+            <div class="trending">#Atletico MG rebaixado pra 2ª divisão</div>
+            <div class="trending">#Aprenda a programar em 2 anos!</div>
+            <div class="trending">#Arthur Hipólito the best Css</div>
+            <div class="trending">#Cariani</div>
+            <div class="trending">#Cinemais anuncia 10 salas grátis em JF</div>
+            <div class="trending">#Cruzeiro na final da Copa do Brasil</div>
+            <div class="trending">#Ia cria concorrente do HTML</div>
+            <div class="trending">#Casa da Champions</div>
+            <div class="trending">#BBB 26</div>
+
+        </div>
+    </div>
+  </body>
+</html>

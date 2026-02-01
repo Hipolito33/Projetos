@@ -1,0 +1,74 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;  /*Zerando tela*/
+}
+body {
+    background-image: linear-gradient(black, white);
+    width: 100%; /* ocopando todo o espaço da janela do navegador com width e heigth*/
+    height: 100%;
+    color: white;   /*todas as fontes de cor branca */
+    background: black; /*Background preto*/
+    font-family: "Fjalla One", sans-serif;
+}
+
+.container::before{
+    content: "";
+    background: url(cruzeiro-tem-pronunciamento-de-ronaldo-sobre-cantos-homofobicos.jpg) no-repeat center center/cover;
+    position: absolute;
+    height: 100%;  /* background ocopando todo o espaço da janela do navegador com width e heigth*/
+    width: 100%;   /* da janela do navegador com width e heigth*/
+    opacity: 0.3;  /*pácidade em 30%*/
+    z-index: -1; /*Fica atrás de qualquer elemento que tiver na tela*/
+}
+.container form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 30px;
+}
+.container form img {
+    margin-bottom: 20px;
+    font-family: sans-serif;
+}
+.container form label { 
+    display: block;
+    float: left;
+    font-size: 18px;
+    color: black;
+    width: 60px;
+    font-size: 20px;
+    
+}
+.container form input {
+    font-size: 1.125rem;
+    border-color: black;
+    border-radius: 7px;
+    border: 1px solid rgb(41, 40, 40);
+    padding: 5px;
+    border-color: rgba(255, 255, 255, 0.637);
+    backdrop-filter: blur(2px);
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.089);
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    background-color: transparent;
+    
+}
+.container form button {
+    border-radius: 7px;
+    font-size: 22px;
+    display: block;
+    margin-top: 60px;   
+    border-color: rgba(255, 255, 255, 0.637);
+    backdrop-filter: blur(2px);
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.089);
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    background-color: transparent;
+}
+.container form button:hover {
+    cursor: pointer;
+    border-color: rgb(0, 60, 255);
+}
+.container form input::placeholder {
+    color: rgb(128, 128, 128);
+}
+
