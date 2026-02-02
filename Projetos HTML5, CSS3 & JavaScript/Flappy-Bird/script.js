@@ -18,12 +18,12 @@ var eec = 100  // Espaço entre os canos em pixels.
 var constant  // Será usada pra soma depois.
 var bX = 33  // Posição X do Bird.
 var bY = 200  // Posição Y do Bird.
-var gravidade = 0.6  // Gravidade para suavizar os movimentos do Bird.
+var gravidade = 0.9  // Gravidade para suavizar os movimentos do Bird.
 var score = 0  // Guarda o placar do Jogo.
 var cano = []
 
 cano[0] = {
-    x : canvas.clientWidth,
+    x : canvas.width,
     y : 0
 }
 
@@ -53,6 +53,13 @@ function jogo(){
         ctx.drawImage(canocima, cano[i].x, cano[i].y) // Configurando cano de cima
         ctx.drawImage(canobaixo, cano[i].x, cano[i].y+constant) // Configurando cano de baixo
         cano[i].x = cano[i].x -1 // Movimentação do cano
+
+        if(cano[i].x == 100){ //Se o cano chagar a 125px da tela(quase no final)
+            cano.push({ //add mais um elemento no array
+                x: canvas.width, //começa no estremo direito da tela
+                y: Math.floor(Math.random()*canocima.height)-canocima.height //novo cano vindo de forma aleatória
+            })
+        }
     } 
         
 
