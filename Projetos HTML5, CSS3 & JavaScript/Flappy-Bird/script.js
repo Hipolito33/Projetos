@@ -9,7 +9,7 @@ bird.src = 'images/bird.png'
 var canobaixo = new Image() // Cano do baixo.
 canobaixo.src = 'images/canobaixo.png'
 var canocima = new Image() // // Cano do alto.
-canocima.src = 'images/canobaixo.png'
+canocima.src = 'images/canocima.png'
 var chao = new Image() // Chão.
 chao.src = 'images/chao.png'
 
@@ -45,6 +45,17 @@ function voa(){
 function jogo(){
     // fundo do jogo
     ctx.drawImage(bg,0,0) // Background do jogo com y e x em 0
+
+
+    // Criando canos
+    for(let i = 0; i < cano.length; i++){ // cano.length(tamanho do cano)
+        constant = canocima.height + eec // Altura do cano de baixo vai ser a altura do cano de cima + o espaço entre os canos(100px)
+        ctx.drawImage(canocima, cano[i].x, cano[i].y) // Configurando cano de cima
+        ctx.drawImage(canobaixo, cano[i].x, cano[i].y+constant) // Configurando cano de baixo
+        cano[i].x = cano[i].x -1 // Movimentação do cano
+    } 
+        
+
 
     //Desenhando o chão
     ctx.drawImage(chao,0, canvas.height - chao.height)
