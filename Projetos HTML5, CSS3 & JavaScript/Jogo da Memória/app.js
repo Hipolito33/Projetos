@@ -49,5 +49,7 @@ addEventListener('DOMContentLoaded', () => { // Inicia sem precisar esperar o ca
             img : 'imagens/esquerda.png'
         }
 
-    ]        
+    ]
+    
+    const grid = document.querySelector('.grid')
 })
