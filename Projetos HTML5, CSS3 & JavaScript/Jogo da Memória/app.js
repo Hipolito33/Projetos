@@ -51,5 +51,17 @@ addEventListener('DOMContentLoaded', () => { // Inicia sem precisar esperar o ca
 
     ]
     
-    const grid = document.querySelector('.grid')
+    const grid = document.querySelector('.grid') //Referência a classe grid criada no CSS.
+    
+    function criaQuadro(){ // Criando Tela de jogo.
+        for(let i = 0; i < cardArray.length; i++){
+            var card = document.createElement('img')
+            card.setAttribute('src', 'imagens/card.png') // Quando inicia o jogo todos os card tem a mesma 'aparência'.
+            card.setAttribute('data-id', i) // Faz com que cada card seja único (0 a 11) cada fileira com 4.
+            //card.addEventListener('click', flipCard) // Quando for clickado nos cards chama a function flipCard.
+            grid.appendChild(card) // Adiciona card como filho de grid.
+        }
+    }
+
+    criaQuadro()
 })
