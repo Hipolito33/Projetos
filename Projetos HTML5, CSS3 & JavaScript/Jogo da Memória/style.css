@@ -1,0 +1,8 @@
+/*Serve para criar uma classe para formatar varios elementos de uma vez só*/
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    height: 300px;
+    margin: 0 auto;
+}
