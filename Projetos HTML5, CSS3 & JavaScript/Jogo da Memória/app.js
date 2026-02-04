@@ -53,6 +53,13 @@ addEventListener('DOMContentLoaded', () => { // Inicia sem precisar esperar o ca
     
     const grid = document.querySelector('.grid') //Referência a classe grid criada no CSS.
     
+    // Variáveis de lógica do jogo
+    const resultDisplay = document.querySelector('#result') // Conecta o placar do jogo
+    var cardsEscolhidos = [] // Array que vai guardar os cards que foram escolhidos na rodada
+    var cardsEscolhidosId = [] // Array que vai guardar o id dos cards que foram escolhidos na rodada
+    var pares = [] // Vai guardar os pares que foram sendo formados durante o jogo
+
+
     function criaQuadro(){ // Criando Tela de jogo.
         for(let i = 0; i < cardArray.length; i++){
             var card = document.createElement('img')
