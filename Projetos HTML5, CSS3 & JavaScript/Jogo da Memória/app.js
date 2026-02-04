@@ -65,10 +65,20 @@ addEventListener('DOMContentLoaded', () => { // Inicia sem precisar esperar o ca
             var card = document.createElement('img')
             card.setAttribute('src', 'imagens/card.png') // Quando inicia o jogo todos os card tem a mesma 'aparência'.
             card.setAttribute('data-id', i) // Faz com que cada card seja único (0 a 11) cada fileira com 4.
-            //card.addEventListener('click', flipCard) // Quando for clickado nos cards chama a function flipCard.
+            card.addEventListener('click', virarCarta) // Quando for clickado nos cards chama a function virarCarta.
             grid.appendChild(card) // Adiciona card como filho de grid.
         }
     }
 
+    function virarCarta(){ // Virando cards
+        var cardId = this.getAttribute('data-id') // Salva na variável o atributo do card que foi acabado de clickar
+        cardsEscolhidos.push(cardArray[cardId].name)
+        cardsEscolhidosId.push(cardId)
+        this.setAttribute('src', cardArray[cardId].img) 
+        if(cardsEscolhidos.length == 2){ // Se 2 cards foram virados
+            setTimeout(checkForMatch, 500)
+        }
+    }   
+    
     criaQuadro()
 })
