@@ -50,6 +50,8 @@ addEventListener('DOMContentLoaded', () => { // Inicia sem precisar esperar o ca
         }
 
     ]
+
+    cardArray.sort(() => 0.5 - Math.random()) // Sorteia os cards de forma aleatória
     
     const grid = document.querySelector('.grid') //Referência a classe grid criada no CSS.
     
