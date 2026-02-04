@@ -97,15 +97,18 @@ addEventListener('DOMContentLoaded', () => { // Inicia sem precisar esperar o ca
         cardsEscolhidosId = [] // Zera o id dos cards escolhidos
         resultDisplay.textContent = pares.length // Mostra o resultado do game com o tamanho do array de pares
 
+        if (pares.length == cardArray.length/2){
+            resultDisplay.textContent = ' Parabéns! você encontrou todos os pares'
+        }
     }
     
     function virarCarta(){ // Virando cards
         var cardId = this.getAttribute('data-id') // Salva na variável o atributo do card que foi acabado de clickar
-        cardsEscolhidos.push(cardArray[cardId].name)
+        cardsEscolhidos.push(cardArray[cardId].nome)
         cardsEscolhidosId.push(cardId)
         this.setAttribute('src', cardArray[cardId].img) 
         if(cardsEscolhidos.length == 2){ // Se 2 cards foram virados
-            setTimeout(checkForMatch, 500)
+            setTimeout(CheckPares, 500)
         }
     }   
     
