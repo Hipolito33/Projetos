@@ -72,6 +72,33 @@ addEventListener('DOMContentLoaded', () => { // Inicia sem precisar esperar o ca
         }
     }
 
+    function CheckPares(){ // Conferindo pares
+        const cards = document.querySelectorAll('img')
+        const opçãoCardId1 = cardsEscolhidosId[0]
+        const opçãoCardId2 = cardsEscolhidosId[1]
+
+        if(opçãoCardId1 == opçãoCardId2){ //Clickar 2 vezes no mesmo card
+            cards[opçãoCardId1].setAttribute('src', 'imagens/card.png')
+            cards[opçãoCardId2].setAttribute('src', 'imagens/card.png')
+            alert('Você clicou na mesma imagem!')
+        } else if (cardsEscolhidos[0] == cardsEscolhidos[1]){ // Achando um par
+            alert('Você Conseguiu um par')
+            cards[opçãoCardId1].setAttribute('src','imagens/white.png') // Mudando imagem para branca(pra mostrar que o poar foi feito)
+            cards[opçãoCardId2].setAttribute('src','imagens/white.png') // Mudando imagem para branca(pra mostrar que o poar foi feito)
+            cards[opçãoCardId1].removeEventListener('click', virarCarta)
+            cards[opçãoCardId2].removeEventListener('click', virarCarta)
+            pares.push(cardsEscolhidos)
+        } else { //Se 2 cards não forem pares um do outro
+            cards[opçãoCardId1].setAttribute('src', 'imagens/card.png')
+            cards[opçãoCardId2].setAttribute('src', 'imagens/card.png')
+            alert('Jogue novamente :)!')
+        }
+        cardsEscolhidos = [] // Zera os cards escolhidos
+        cardsEscolhidosId = [] // Zera o id dos cards escolhidos
+        resultDisplay.textContent = pares.length // Mostra o resultado do game com o tamanho do array de pares
+
+    }
+    
     function virarCarta(){ // Virando cards
         var cardId = this.getAttribute('data-id') // Salva na variável o atributo do card que foi acabado de clickar
         cardsEscolhidos.push(cardArray[cardId].name)
