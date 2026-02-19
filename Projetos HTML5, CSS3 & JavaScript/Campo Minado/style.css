@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #282c34;
+    color: white;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+#game-container {
+    display: grid;
+    grid-template-columns: repeat(10, 50px);
+    grid-gap: 5px;
+    background-color: #444;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.celula {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #61dafb;
+    font-size: 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+/* Hover só se não estiver revelada */
+.celula:not(.revelada):hover {
+    transform: scale(1.1);
+    background-color: #21a1f1;
+}
+
+/* Célula revelada */
+.celula.revelada {
+    background-color: #b2f7ef;
+    color: black;
+    cursor: default;
+}
+
+
+/* 💣 Só mostra vermelho quando for revelada */
+.celula.revelada.bomba {
+    background-color: #ff4c4c;
+    color: white;
+}

@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;  /*Zerando tela*/
+}
+body {
+    background-image: url(background-cruzeiro.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    width: 100%;
+    height: 100vh; /* deixando todos os itens dentro do corpor flexiveis*/
+    display: flex;     /*Config do body pra pegar toda a tela*/
+    font-family: "Fjalla One", sans-serif;
+    font-style: normal;
+}
+
+.container {
+    height: 34.375rem;
+    width: 25rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: transparent;
+    border-radius: 15px;
+    border-color: rgba(255, 255, 255, 0.637);
+    backdrop-filter: blur(7px);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.500);
+    border: 1px solid rgba(255, 255, 255, 0.13);
+}
+.container form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; padding: 10px 30px;
+}
+.container form img {
+    margin-bottom: 10px;
+    font-family: sans-serif;
+}
+.container form label { 
+    display: block;
+    float: left;
+    font-size: 18px;
+    color: black;
+    width: 60px;
+    
+}
+.container form input {
+    font-size: 1.125rem;
+    border-color: black;
+    border-radius: 7px;
+    border: 1px solid rgb(41, 40, 40);
+    padding: 3px;
+    border-color: rgba(255, 255, 255, 0.637);
+    backdrop-filter: blur(2px);
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.089);
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    background-color: transparent;
+    
+}
+button:hover {
+    cursor: pointer;
+
+}
+.container form button {
+    border-radius: 7px;
+    font-size: 22px;
+    display: block;
+    margin-top: 5px;   
+    border-color: rgba(255, 255, 255, 0.637);
+    backdrop-filter: blur(2px);
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.089);
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    background-color: transparent;
+}
+.container form button:hover {
+    border-color: rgb(0, 60, 255);
+}
+.container form input::placeholder {
+    color: rgba(0, 0, 0, 0.784);
+}
+.container form p a {
+    text-decoration: none;
+}

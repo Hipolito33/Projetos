@@ -4,28 +4,37 @@
     box-sizing: border-box;  /*Zerando tela*/
 }
 body {
-    background-image: linear-gradient(black, white);
-    width: 100%; /* ocopando todo o espaço da janela do navegador com width e heigth*/
-    height: 100%;
-    color: white;   /*todas as fontes de cor branca */
-    background: black; /*Background preto*/
+    background-image: url(background-cruzeiro.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    width: 100%;
+    height: 100vh; /* deixando todos os itens dentro do corpor flexiveis*/
+    display: flex;     /*Config do body pra pegar toda a tela*/
     font-family: "Fjalla One", sans-serif;
+    font-style: normal;
 }
 
-.container::before{
-    content: "";
-    background: url(cruzeiro-tem-pronunciamento-de-ronaldo-sobre-cantos-homofobicos.jpg) no-repeat center center/cover;
-    position: absolute;
-    height: 100%;  /* background ocopando todo o espaço da janela do navegador com width e heigth*/
-    width: 100%;   /* da janela do navegador com width e heigth*/
-    opacity: 0.3;  /*pácidade em 30%*/
-    z-index: -1; /*Fica atrás de qualquer elemento que tiver na tela*/
+.container {
+    height: 34.375rem;
+    width: 25rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: transparent;
+    border-radius: 15px;
+    border-color: rgba(255, 255, 255, 0.637);
+    backdrop-filter: blur(7px);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.500);
+    border: 1px solid rgba(255, 255, 255, 0.13);
 }
 .container form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding: 10px 30px;
+    gap: 20px; padding: 10px 30px;
 }
 .container form img {
     margin-bottom: 20px;
@@ -37,7 +46,6 @@ body {
     font-size: 18px;
     color: black;
     width: 60px;
-    font-size: 20px;
     
 }
 .container form input {
@@ -53,6 +61,10 @@ body {
     background-color: transparent;
     
 }
+button:hover {
+    cursor: pointer;
+
+}
 .container form button {
     border-radius: 7px;
     font-size: 22px;
@@ -65,10 +77,11 @@ body {
     background-color: transparent;
 }
 .container form button:hover {
-    cursor: pointer;
     border-color: rgb(0, 60, 255);
 }
 .container form input::placeholder {
-    color: rgb(128, 128, 128);
+    color: black;
 }
-
+.container form p a {
+    text-decoration: none;
+}
